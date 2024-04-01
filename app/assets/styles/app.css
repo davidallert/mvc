@@ -1,0 +1,48 @@
+html {
+    --base-width: 60%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* background: url('../images/background.jpg');
+    background-size: cover; */
+}
+
+main,
+footer,
+nav {
+    max-width: var(--base-width);
+    margin: 0 auto;;
+}
+
+nav > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    border-bottom: 4px double #ccc;
+}
+
+.site-header {
+    height: 18rem;
+    background-position: top;
+    background-size: auto;
+    background-repeat: no-repeat;
+    margin-bottom: 1.4rem;
+    margin-top: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-header .site-title {
+    font-size: xx-large;
+    background-color: #cccccc57;
+    width: 25%;
+    padding: 3%;
+    text-align: center;
+}
