@@ -1,0 +1,16 @@
+input {
+    font-size: 1em;
+}
+
+.dice {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.die {
+    font-size: 4em;
+    list-style-type: none;
+}

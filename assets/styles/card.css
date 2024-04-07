@@ -1,0 +1,17 @@
+input {
+    font-size: 1em;
+}
+
+.deck {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1vw;
+}
+.card {
+    font-size: 5.5vw;
+    list-style-type: none;
+}

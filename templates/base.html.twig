@@ -22,11 +22,13 @@
                 <li><a href="{{ path('lucky_number') }}">Lucky number</a></li>
                 <li><a href="{{ path('report') }}">Report</a></li>
                 <li><a href="{{ path('api') }}">API</a></li>
+                <li><a href="{{ path('pig_start') }}">Pig</a></li>
+                <li><a href="{{ path('card') }}">Card</a></li>
             </ul>
         </nav>
-        <header class="site-header" style="background-image: url({{ asset('img/background.jpg') }})">
+        {# <header class="site-header" style="background-image: url({{ asset('img/background.jpg') }})">
             <span class="site-title">My Symfony Site :)</span>
-        </header>
+        </header> #}
         <main>
             {% block body %}{% endblock %}
         </main>

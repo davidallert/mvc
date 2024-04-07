@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Card {% endblock %}
+
+{% block body %}
+    <h1>Session overview</h1>
+    <h2>Dumping session values</h2>
+
+    {# read and display all flash messages #}
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="flash-{{ label }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+    {# <p>{{ session }}</p> #}
+    <p>{{ dump(session) }}</p>
+
+    {# {% for session_value in session %}
+        <p>
+            {{ session_value }}
+        </p>
+    {% endfor %} #}
+{% endblock %}

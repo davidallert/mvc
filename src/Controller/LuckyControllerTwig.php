@@ -8,18 +8,18 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class LuckyControllerTwig extends AbstractController
 {
-
     #[Route("/lucky", name: "lucky_number")]
     public function number(): Response
     {
         $number = random_int(1, 3);
 
-        if ($number === 1)
+        if ($number === 1) {
             $image = "one";
-        elseif ($number === 2)
+        } elseif ($number === 2) {
             $image = "two";
-        elseif ($number === 3)
+        } elseif ($number === 3) {
             $image = "three";
+        }
 
         $data = [
             'number' => $number,

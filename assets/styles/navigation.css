@@ -1,0 +1,23 @@
+nav > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: x-large;
+}
+
+nav {
+    margin: 0 auto;
+    background-color: var(--base-blue);
+    max-width: var(--full-width);
+}
+
+nav a {
+    font-size: 2.1rem;
+    font-weight: bold;
+    color: var(--base-orange);
+    font-family: "Bebas Neue", "Monterrat", sans-serif;
+    letter-spacing: 2.1px;
+}

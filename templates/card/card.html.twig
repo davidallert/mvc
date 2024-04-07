@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Card {% endblock %}
+
+{% block body %}
+    <h1>Card overview</h1>
+    <p>My card routes:</p>
+    <ul>
+        <li><a href="{{ path('deck') }}">Card deck</a></li>
+        <li><a href="{{ path('deck_shuffle') }}">Shuffle deck</a></li>
+        <li><a href="{{ path('deck_draw') }}">Draw a card</a></li>
+        <li><a href="{{ path('deck_draw_many', {num: 5}) }}">Draw 5 cards</a></li>
+        <li><a href="{{ path('deck_drawn') }}">Display drawn cards</a></li>
+        <li><a href="{{ path('card_session') }}">Check session</a></li>
+        <li><a href="{{ path('clear_session') }}">Clear session</a></li>
+    </ul>
+    <h2>Min kodstruktur</h2>
+    <p>Min kod är uppdelad i tre klasser: Card, CardGraphic och Deck. Ett kort initieras med två värden, vilken svit/färg det tillhör samt vad värdet på kortet är. Kortet har tre get-metoder. Klassen CardGraphic utökar Card och initeras på samma sätt. Den här klassen kan skriva ut en representation av korten med hjälp av UTF-8-tecken.</p>
+    <p>Sist men inte minst har vi klassen Deck. Den har två stycken konstanter (antal sviter och antal kort per svit) som används när kortleken skapas. Metoden createDeck loopar över konstanternas värden och skapar en kortlek med 52 kort. Ett problem med den är dock att den är hårdkodad för att skapa en lek med CardGraphic-klasser; för att komma runt detta skapade jag en ny metod som skapar en kortlek av den vanliga Card-klassen, det blev tydligare när jag skulle visa datan i JSON. Det känns inte som en jättebra lösning men det får duga för tillfället.</p>
+    <p></p>
+    <h2>UML-diagram</h2>
+    <img src="{{ asset('img/UML_kmom02.png') }}">
+{% endblock %}
