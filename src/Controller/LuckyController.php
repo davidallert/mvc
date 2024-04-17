@@ -19,7 +19,7 @@ class LuckyController
     }
 
     #[Route("/lucky/hi")]
-    public function hi(): Response
+    public function hello(): Response
     {
         return new Response(
             '<html><body>Hi to you!</body></html>'
@@ -54,12 +54,12 @@ class LuckyController
             "He who is not contented with what he has, would not be contented with what he would like to have.",
             "Fate leads him who follows it, and drags him who resist."
         ];
-        $quote_of_the_day = $quotes[$number];
+        $quoteOfTheDay = $quotes[$number];
 
         $data = [
             'timestamp' => $timestamp,
             'date' => $date,
-            'quote_of_the_day' => $quote_of_the_day
+            'quote_of_the_day' => $quoteOfTheDay
         ];
 
         return new JsonResponse($data);

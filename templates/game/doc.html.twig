@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Card {% endblock %}
+
+{% block body %}
+    <h1>Documentation</h1>
+    <p>Spelets idé är att med två eller flera kort försöka uppnå det sammanlagda värdet 21, eller komma så nära som möjligt utan att överskrida 21. Ess är värt 1.</p>
+    <h2>Pseudocode</h2>
+    <p>Initiate the game.</p>
+    <p>Add player and the Bank to the Game class, by calling the addPlayer(Player) method.</p>
+    <p>Create a new deck.</p>
+    <p>The player can either stop or draw a card.</p>
+    <p>If the player draws, call the deck draw method and put the card into the hand of the player class.</p>
+    <p>Calculate the player's score by calling the calculateScore() method.</p>
+    <p>If it's above 21, the bank immediately wins.</p>
+    <p>If it's below, the player is once again given the choice to stop or draw.</p>
+    <p>If the player stops, add +1 to the current player index. It's now the Bank's turn.</p>
+    <p>The bank draws cards. If its score is above 17, it stops.</p>
+    <p>If its score is below, it keeps drawing.</p>
+    <p>If its score is above 21, it loses.</p>
+    <h2>Flowchart</h2>
+    <img class="img" src="{{ asset('img/flowchart.png') }}">
+{% endblock %}

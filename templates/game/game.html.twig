@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Card {% endblock %}
+
+{% block body %}
+    <h1>Game overview</h1>
+    <ul>
+        <li><a href="{{ path('game_doc') }}">Documentation</a></li>
+        <li><a href="{{ path('card_session') }}">Check session</a></li>
+        <li><a href="{{ path('clear_session') }}">Clear session</a></li>
+    </ul>
+    <h2><a href="{{ path('game_init') }}">Play the game</a></h2>
+{% endblock %}

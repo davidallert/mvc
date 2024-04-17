@@ -48,23 +48,23 @@ class JsonApi
         if (!$session->get("deck")) {
             $deck = new Deck();
             $deck->createDeckJson();
-        } else {
+        } elseif ($session->get("deck")) {
             $deck = $session->get("deck");
         }
 
-        $drawn_cards_arr = $deck->draw();
-        $drawn_cards_deck = new Deck();
-        foreach ($drawn_cards_arr as $card) {
-            $drawn_cards_deck->addCard($card);
+        $drawnCardsArr = $deck->draw();
+        $drawnCardsDeck = new Deck();
+        foreach ($drawnCardsArr as $card) {
+            $drawnCardsDeck->addCard($card);
         }
 
-        $drawn_cards_deck = $drawn_cards_deck->getCardsAsString();
+        $drawnCardsDeck = $drawnCardsDeck->getCardsAsString();
 
         $session->set("deck", $deck);
 
         $data = [
             'cards_left' => $deck->countCards(),
-            'drawn_cards_deck' => $drawn_cards_deck,
+            'drawn_cards_deck' => $drawnCardsDeck,
         ];
 
         return new JsonResponse($data);
@@ -78,23 +78,23 @@ class JsonApi
         if (!$session->get("deck")) {
             $deck = new Deck();
             $deck->createDeckJson();
-        } else {
+        } elseif ($session->get("deck")) {
             $deck = $session->get("deck");
         }
 
-        $drawn_cards_arr = $deck->draw($num);
-        $drawn_cards_deck = new Deck();
-        foreach ($drawn_cards_arr as $card) {
-            $drawn_cards_deck->addCard($card);
+        $drawnCardsArr = $deck->draw($num);
+        $drawnCardsDeck = new Deck();
+        foreach ($drawnCardsArr as $card) {
+            $drawnCardsDeck->addCard($card);
         }
 
-        $drawn_cards_deck = $drawn_cards_deck->getCardsAsString();
+        $drawnCardsDeck = $drawnCardsDeck->getCardsAsString();
 
         $session->set("deck", $deck);
 
         $data = [
             'cards_left' => $deck->countCards(),
-            'drawn_cards_deck' => $drawn_cards_deck,
+            'drawn_cards_deck' => $drawnCardsDeck,
         ];
 
         return new JsonResponse($data);
@@ -106,5 +106,19 @@ class JsonApi
     ): Response {
         $session->clear();
         return new JsonResponse(null);
+    }
+
+    #[Route("api/game")]
+    public function game(
+        sessionInterface $session
+    ): Response {
+        $data = [
+            'cards_in_hand' => $session->get("cards_in_hand"),
+            'player_score' => $session->get("player_score"),
+            'player_name' => $session->get("player_name"),
+            'bank_cards' => $session->get("bank_cards"),
+            'bank_score' => $session->get("bank_score"),
+        ];
+        return new JsonResponse($data);
     }
 }

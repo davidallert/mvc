@@ -49,7 +49,7 @@ class CardGameController extends AbstractController
 
     // Shuffle ....................................................................................
     #[Route("/card/deck/shuffle", name: "deck_shuffle")]
-    public function ShuffleDeck(
+    public function shuffleDeck(
         sessionInterface $session
     ): Response {
         // $deck = $session->get("deck_obj");
@@ -70,21 +70,21 @@ class CardGameController extends AbstractController
 
     // Draw .......................................................................................
     #[Route("/card/deck/draw", name: "deck_draw")]
-    public function DrawFromDeck(
+    public function drawFromDeck(
         sessionInterface $session
     ): Response {
         $deck = $session->get("deck_obj");
 
         // Drawn cards.
-        $drawn_cards_arr = $deck->draw();
-        $drawn_cards_deck = new Deck();
-        foreach ($drawn_cards_arr as $card) {
-            $drawn_cards_deck->addCard($card);
+        $drawnCardsArr = $deck->draw();
+        $drawnCardsDeck = new Deck();
+        foreach ($drawnCardsArr as $card) {
+            $drawnCardsDeck->addCard($card);
         }
 
-        $drawn_cards_deck = $drawn_cards_deck->getCardsAsString();
+        $drawnCardsDeck = $drawnCardsDeck->getCardsAsString();
 
-        $session->set("drawn_cards_deck", $drawn_cards_deck);
+        $session->set("drawn_cards_deck", $drawnCardsDeck);
         $session->set("deck_obj", $deck);
 
         return $this->redirectToRoute('deck_drawn');
@@ -92,7 +92,7 @@ class CardGameController extends AbstractController
 
     // Display drawn cards ....................................................................
     #[Route("/card/deck/drawn", name: "deck_drawn")]
-    public function DisplayDrawnDeck(
+    public function displayDrawnDeck(
         sessionInterface $session
     ): Response {
         $data = [
@@ -117,22 +117,22 @@ class CardGameController extends AbstractController
     // }
 
     #[Route("/card/deck/draw/{num<\d+>}", name: "deck_draw_many")]
-    public function DrawManyFromDeck(
+    public function drawManyFromDeck(
         int $num,
         sessionInterface $session
     ): Response {
         $deck = $session->get("deck_obj");
 
         // Drawn cards.
-        $drawn_cards_arr = $deck->draw($num);
-        $drawn_cards_deck = new Deck();
-        foreach ($drawn_cards_arr as $card) {
-            $drawn_cards_deck->addCard($card);
+        $drawnCardsArr = $deck->draw($num);
+        $drawnCardsDeck = new Deck();
+        foreach ($drawnCardsArr as $card) {
+            $drawnCardsDeck->addCard($card);
         }
 
-        $drawn_cards_deck = $drawn_cards_deck->getCardsAsString();
+        $drawnCardsDeck = $drawnCardsDeck->getCardsAsString();
 
-        $session->set("drawn_cards_deck", $drawn_cards_deck);
+        $session->set("drawn_cards_deck", $drawnCardsDeck);
         $session->set("deck_obj", $deck);
 
         // return $this->render("card/deck_draw.html.twig", $data);

@@ -14,4 +14,18 @@ input {
 .card {
     font-size: 5.5vw;
     list-style-type: none;
+    background-color: #fff;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 7px;
+}
+
+.suit1,
+.suit4 {
+    color: var(--black-cards);
+}
+
+.suit2,
+.suit3 {
+    color: var(--red-cards);
 }

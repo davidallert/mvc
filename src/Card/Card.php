@@ -4,7 +4,8 @@ namespace App\Card;
 
 class Card
 {
-    // protected $value;
+    protected int $suit = 0;
+    protected int $value = 0;
 
     public function __construct(int $suit, int $value)
     {

@@ -13,7 +13,11 @@ RewriteRule (.*) - [NC,L]
 
 # Rewrite 1 - For request via www.student.bth.se
 RewriteCond %{HTTP_HOST} ^www\.student\.bth\.se$ [NC]
-RewriteRule (.*) /~daae23/dbwebb-kurser/mvc/me/kmom01/symfony/app/public/index.php/$1 [NC,L]
+# RewriteRule (.*) /~daae/dbwebb-kurser/mvc/me/report/public/index.php/game/pig/play [NC,L]
+RewriteRule (.*) /~daae23/dbwebb-kurser/mvc/me/report/public/index.php [NC,L] # Autoloader error.
+# RewriteRule (.*) /~daae23/dbwebb-kurser/mvc/me/kmom01/symfony/app/public/index.php/$1 [NC,L] # Original.
+# /~mosstud/dbwebb-kurser/mvc/me/report/public/index.php/game/pig/play # Mos edition.
+
 
 # Rewrite 2 - For other requests
 RewriteCond %{HTTP_HOST} !^www\.student\.bth\.se$ [NC]

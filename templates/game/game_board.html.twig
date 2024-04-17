@@ -1,0 +1,44 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Card {% endblock %}
+
+{% block body %}
+{# <pre>
+    {{ dump(session) }}
+</pre> #}
+    <h1 style="text-align:center;">21</h1>
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="flash-{{ label }}">
+                {{ message|raw }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+    <div class="board">
+    {# style="background-image:url(' {{ asset('img/bg.jpg')}} ')" #}
+        <div class="bank">
+            <h2>Bank</h2>
+            <p>Current score: {{ bank_score }}</p>
+            {% for card in bank_cards %}
+                <span class="card suit{{ card.getSuit() }}">{{ card.getAsString() }}</span>
+            {% endfor %}
+        </div>
+
+        <h3>VS.</h3>
+        {# <div class="endScreen">
+            <span class="endContent">{{ end_screen }}</span>
+        </div> #}
+
+        <div class="player">
+            {% for card in cards_in_hand %}
+                <span class="card suit{{ card.getSuit() }}">{{ card.getAsString() }}</span>
+            {% endfor %}
+            <h2>{{ player_name }}</h2>
+            <p>Current score: {{ player_score }}</p>
+            <div class="buttons">
+                <a class="button coloredButton" href="{{ path('game_draw') }}">Draw</a>
+                <a class="button coloredButton" href="{{ path('game_stop') }}">Stop</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

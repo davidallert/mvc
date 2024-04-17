@@ -1,17 +1,24 @@
 html {
+    /* Colors */
     --base-width: 60%;
     --full-width: 100%;
     --base-blue: #0034ffd4;
     --base-orange: #ffa956;
+    /* --alternative-base-blue: #2000ffd4;
+    --alternative-base-orange: #ff8300; */
+    --red-cards: #FF4136;
+    --black-cards: #111111;
 
-    --alternative-base-blue: #2000ffd4;
-    --alternative-base-orange: #ff8300;
+    /* Fonts */
+    --header-font: "Bebas Neue", "Monterrat", sans-serif;
+    --base-font: "Roboto", Montserrat, sans-serif;
 }
 
 body {
     margin: 0;
     padding: 0;
     color: #222;
+    box-sizing: border-box;
     font-family: "Roboto", Montserrat, sans-serif;
     /* background: url('../images/background.jpg');
     background-size: cover; */
@@ -38,6 +45,15 @@ footer {
 h1 {
     border-bottom: 1px solid black;
     padding: 1.4rem 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--header-font);
 }
 
 input {
