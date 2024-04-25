@@ -76,11 +76,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Card-Deck.html#method_createDeck"
         },                {
-            "fqsen": "\\App\\Card\\Deck\u003A\u003AcreateDeckJson\u0028\u0029",
-            "name": "createDeckJson",
-            "summary": "",
-            "url": "classes/App-Card-Deck.html#method_createDeckJson"
-        },                {
             "fqsen": "\\App\\Card\\Deck\u003A\u003AcountCards\u0028\u0029",
             "name": "countCards",
             "summary": "",
@@ -203,32 +198,32 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Card\\Player",
             "name": "Player",
-            "summary": "",
+            "summary": "The\u0020player\u0020class\u0020holds\u0020information\u0020about\u0020the\u0020player.",
             "url": "classes/App-Card-Player.html"
         },                {
             "fqsen": "\\App\\Card\\Player\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Initiate\u0020the\u0020player\u0020class\u0020with\u0020a\u0020name.",
             "url": "classes/App-Card-Player.html#method___construct"
         },                {
             "fqsen": "\\App\\Card\\Player\u003A\u003AaddCard\u0028\u0029",
             "name": "addCard",
-            "summary": "",
+            "summary": "Adds\u0020a\u0020card\u0020to\u0020the\u0020player\u0027s\u0020hand.",
             "url": "classes/App-Card-Player.html#method_addCard"
         },                {
             "fqsen": "\\App\\Card\\Player\u003A\u003AgetCards\u0028\u0029",
             "name": "getCards",
-            "summary": "",
+            "summary": "Returns\u0020the\u0020cards\u0020in\u0020the\u0020player\u0027s\u0020hand.",
             "url": "classes/App-Card-Player.html#method_getCards"
         },                {
             "fqsen": "\\App\\Card\\Player\u003A\u003AgetName\u0028\u0029",
             "name": "getName",
-            "summary": "",
+            "summary": "Returns\u0020the\u0020player\u0020name.",
             "url": "classes/App-Card-Player.html#method_getName"
         },                {
             "fqsen": "\\App\\Card\\Player\u003A\u003A\u0024cardsInHand",
             "name": "cardsInHand",
-            "summary": "",
+            "summary": "Private\u0020variable\u0020\u0024cardsInHand\u0020\u003A\u0020array\u0020contains\u0020the\u0020cards\u0020in\u0020the\u0020player\u0027s\u0020hand.",
             "url": "classes/App-Card-Player.html#property_cardsInHand"
         },                {
             "fqsen": "\\App\\Card\\Player\u003A\u003A\u0024name",

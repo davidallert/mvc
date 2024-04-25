@@ -35,15 +35,15 @@ class Deck
         }
     }
 
-    public function createDeckJson(): void
-    {
-        for ($suitNum = 1; $suitNum <= self::SUITS; $suitNum++) {
-            for ($cardNum = 1; $cardNum <= self::CARDS_IN_SUIT; $cardNum++) {
-                $card = new Card($suitNum, $cardNum);
-                $this->addCard($card);
-            }
-        }
-    }
+    // public function createDeckJson(): void
+    // {
+    //     for ($suitNum = 1; $suitNum <= self::SUITS; $suitNum++) {
+    //         for ($cardNum = 1; $cardNum <= self::CARDS_IN_SUIT; $cardNum++) {
+    //             $card = new Card($suitNum, $cardNum);
+    //             $this->addCard($card);
+    //         }
+    //     }
+    // }
 
     // public function getCards(): array
     // {
