@@ -88,12 +88,15 @@
             "@phpmd",
             "@phpstan"
         ],
+        "phpunit": "XDEBUG_MODE=coverage vendor/bin/phpunit",
         "post-install-cmd": [
             "@auto-scripts"
         ],
         "post-update-cmd": [
             "@auto-scripts"
-        ]
+        ],
+        "phpdoc": "tools/phpdoc/phpdoc --config=tools/phpdoc/phpdoc.xml"
+
     },
     "conflict": {
         "symfony/symfony": "*"
