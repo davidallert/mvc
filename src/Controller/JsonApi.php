@@ -113,11 +113,11 @@ class JsonApi
         sessionInterface $session
     ): Response {
         $data = [
-            'cards_in_hand' => $session->get("cards_in_hand"),
-            'player_score' => $session->get("player_score"),
-            'player_name' => $session->get("player_name"),
-            'bank_cards' => $session->get("bank_cards"),
-            'bank_score' => $session->get("bank_score"),
+            // 'cards_in_hand' => $session->get("cards_in_hand"),
+            'player_score'  => $session->get("player_score"),
+            'player_name'   => $session->get("player_name"),
+            // 'bank_cards'    => $session->get("bank_cards"),
+            'bank_score'    => $session->get("bank_score"),
         ];
         return new JsonResponse($data);
     }

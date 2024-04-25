@@ -76,6 +76,9 @@ class Game
         $playerScore = $this->calculateScore(0);
         $bankScore = $this->calculateScore(1);
 
+        // $playerScore = 19;
+        // $bankScore = 18;
+
         // var_dump($playerScore);
         // var_dump($bankScore);
 
@@ -88,6 +91,9 @@ class Game
             $victory = true;
             return $victory;
         } elseif ($bankScore >= $playerScore) {
+            return $victory;
+        } elseif ($playerScore > $bankScore) {
+            $victory = true;
             return $victory;
         }
 
