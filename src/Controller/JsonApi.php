@@ -2,17 +2,22 @@
 
 namespace App\Controller;
 
+// Classes
 use App\Card\Deck;
+
+// ORM
+use App\Entity\Book;
+use App\Repository\BookRepository;
+use Doctrine\Persistence\ManagerRegistry;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-
-// Request and session interfaces.
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class JsonApi
+class JsonApi extends AbstractController
 {
     #[Route("/api/deck")]
     public function jsonDeck(): Response
@@ -120,5 +125,57 @@ class JsonApi
             'bank_score'    => $session->get("bank_score"),
         ];
         return new JsonResponse($data);
+    }
+
+
+    #[Route('/api/library/books')]
+    public function showLibraryJson(
+        BookRepository $bookRepository
+    ): Response {
+        $books = $bookRepository->findAll();
+
+        $bookArray = [];
+        foreach ($books as $book) {
+            $bookArray[] = [
+                'id' => $book->getId(),
+                'title' => $book->getTitle(),
+                'isbn' => $book->getIsbn(),
+                'author' => $book->getAuthor(),
+                'image' => $book->getImage(),
+            ];
+        }
+
+        $data = [
+            'books' => $bookArray,
+        ];
+
+        return new JsonResponse($data);
+
+    }
+
+    #[Route('/api/library/book/{isbn}')]
+    public function showLibraryBookJson(
+        BookRepository $bookRepository,
+        string $isbn
+    ): Response {
+
+        $books = $bookRepository->findAll();
+
+        foreach ($books as $book) {
+
+            $data = [];
+            if ($book->getIsbn() === $isbn) {
+                $data = [
+                    'id' => $book->getId(),
+                    'title' => $book->getTitle(),
+                    'isbn' => $book->getIsbn(),
+                    'author' => $book->getAuthor(),
+                    'image' => $book->getImage(),
+                ];
+            };
+        };
+
+        return new JsonResponse($data);
+
     }
 }

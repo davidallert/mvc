@@ -41,7 +41,7 @@ class DiceGameController extends AbstractController
     public function testRollDices(int $num): Response
     {
         if ($num > 99) {
-            throw new Exception("Can not roll more than 99 dices!");
+            throw new Exception("Can not roll more than 99 dice!");
             // throw new \Exception("Can not roll more than 99 dices!");
         }
 

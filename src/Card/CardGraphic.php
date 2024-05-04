@@ -4,7 +4,6 @@ namespace App\Card;
 
 class CardGraphic extends Card
 {
-
     private array $representation = [
         1 => ["🃑", "🃒", "🃓", "🃔", "🃕", "🃖", "🃗", "🃘", "🃙", "🃚", "🃛", "🃝", "🃞"], # Ace - King of Clubs
         2 => ["🃁", "🃂", "🃃", "🃄", "🃅", "🃆", "🃇", "🃈", "🃉", "🃊", "🃋", "🃍", "🃎"], # Ace - King of Diamonds

@@ -8,7 +8,6 @@ namespace App\Card;
 
 class Player
 {
-
     /**
      * Private variable $cardsInHand : array contains the cards in the player's hand.
      * @var Card[]
@@ -20,9 +19,9 @@ class Player
      */
     private string $name;
 
-    /** 
+    /**
      * Initiate the player class with a name.
-     * 
+     *
      * @param string $name Contains the player's name.
      */
     public function __construct(string $name = "Player")
@@ -32,19 +31,19 @@ class Player
 
     /**
      * Adds a card to the player's hand.
-     * 
+     *
      * @param Card $card The card parameter.
      */
-    public function addCard(Card $card) : void
+    public function addCard(Card $card): void
     {
         $this->cardsInHand[] = $card;
     }
 
     /**
      * Returns the cards in the player's hand.
-     * 
+     *
      * @return array The player's cards.
-     */ 
+     */
     public function getCards(): array
     {
         return $this->cardsInHand;
@@ -52,7 +51,7 @@ class Player
 
     /**
      * Returns the player name.
-     * 
+     *
      * @return string The player's name.
      */
     public function getName(): string

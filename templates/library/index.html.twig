@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello LibraryController!{% endblock %}
+
+{% block body %}
+
+<h1>Välkommen till bibblan</h1>
+
+<p><a href="{{ path('library_create') }}">Lägg till en bok i biblioteket (Create).</a></p>
+<p><a href="{{ path('library_read_all') }}">Kolla vad som finns i hyllorna (Read).</a></p>
+
+{% endblock %}

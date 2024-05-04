@@ -6,28 +6,28 @@ class Game
 {
     private array $players = []; // Will hold one player object per player.
     private int $currentPlayer = 0; // Keeps track of the current player
-    private bool $finished = FALSE;
+    private bool $finished = false;
 
     // Adds a player to the "players" key-value array.
-    public function addPlayer(Player $player) : void
+    public function addPlayer(Player $player): void
     {
         $this->players[] = $player;
     }
 
     // Returns the current player.
-    public function getCurrentPlayer() : Player
+    public function getCurrentPlayer(): Player
     {
         return $this->players[$this->currentPlayer];
     }
 
-    public function getPlayerFromIndex(int $index) : Player
+    public function getPlayerFromIndex(int $index): Player
     {
         // Returns a specific player.
         return $this->players[$index]; // $index 0 is the player and $index 1 is the bank.
     }
 
     // Calculates the total score for the current player.
-    public function calculateScore(int $playerIndex = -1) : int
+    public function calculateScore(int $playerIndex = -1): int
     {
         $sum = 0;
 
@@ -49,7 +49,7 @@ class Game
     }
 
     // Changes the current player.
-    public function stop() : void
+    public function stop(): void
     {
         // Adds +1 to the $currentPlayer : int variable.
         // This will make the game move on to the next player object in the $players : array.
@@ -59,20 +59,20 @@ class Game
     }
 
     // Mark the game as finished.
-    public function setFinished() : void
+    public function setFinished(): void
     {
-        $this->finished = TRUE;
+        $this->finished = true;
     }
 
     // Check if the game is finished.
-    public function getFinished() : bool
+    public function getFinished(): bool
     {
         return $this->finished;
     }
 
-    public function getVictoryResult() : bool
+    public function getVictoryResult(): bool
     {
-        $victory = FALSE;
+        $victory = false;
         $playerScore = $this->calculateScore(0);
         $bankScore = $this->calculateScore(1);
 

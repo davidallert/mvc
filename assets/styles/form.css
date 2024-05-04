@@ -1,0 +1,10 @@
+.form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, .submitButton {
+    padding: 1%;
+}

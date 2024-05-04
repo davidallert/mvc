@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ book.getTitle|e }} | {{ book.getAuthor|e }} {% endblock %}
+
+{% block body %}
+
+<h1>{{ book.getTitle|e }}</h1>
+
+<div>
+    <p>{{ book.getTitle|e }} är skriven av {{ book.getAuthor|e }}.</p>
+    <p>Bokens id är {{ book.getId|e }}.</p>
+    <img src="{{ book.getImage|e }}">
+    <p><i>ISBN: {{ book.getIsbn|e }}</i></p>
+    <p><a href="{{ path('book_update', {'id': book.getId }) }}">Redigera bokens information.</a></p>
+    <p><a href="{{ path('book_delete', {'id': book.getId }) }}">Ta bort boken.</a></p>
+</div>
+
+{% endblock %}

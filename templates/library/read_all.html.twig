@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Lägg till en bok i biblioteket{% endblock %}
+
+{% block body %}
+
+<h1>Biblioteket</h1>
+
+    {% for book in library %}
+        <div>
+            <a href="{{ path('library_read_one', {'id': book.getId }) }}">
+                <p>{{ book.getTitle|e }} ({{ book.getId|e }}) {{ book.getAuthor|e }}</p>
+            </a>
+        </div>
+    {% endfor %}
+
+{% endblock %}

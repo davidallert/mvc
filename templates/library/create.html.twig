@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Lägg till en bok i biblioteket{% endblock %}
+
+{% block body %}
+
+<h1>Lägg till en bok i biblioteket</h1>
+
+<form action="" method="POST" class="form">
+
+    <label for="title">Bokens titel</label>
+    <input type="text" name="title" required>
+
+    <label for="author">Författarens namn</label>
+    <input type="text" name="author" required>
+
+    <label for="isbn">ISBN</label>
+    <input type="text" name="isbn" required>
+
+    <label for="image">Bild</label>
+    <input type="text" name="image" required>
+
+    <input type="submit" class="submitButton" value="Lägg till boken">
+
+</form>
+
+{% endblock %}

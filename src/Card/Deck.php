@@ -113,12 +113,12 @@ class Deck
         // var_dump($this->deck);
     }
 
-    public function getLastDrawnCard() : cardGraphic
+    public function getLastDrawnCard(): cardGraphic
     {
         return $this->lastDrawnCard;
     }
 
-    public function getDrawnCards() : array
+    public function getDrawnCards(): array
     {
         return $this->drawnCardsDeck;
     }
