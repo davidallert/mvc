@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1714823719">
-  <project timestamp="1714823719">
+<coverage generated="1715111413">
+  <project timestamp="1715111413">
     <file name="/home/david/dbwebb-kurser/mvc/me/report/src/Card/Card.php">
       <class name="App\Card\Card" namespace="global">
         <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="9" coveredelements="9"/>
@@ -375,8 +375,8 @@
       <line num="152" type="stmt" count="0"/>
       <line num="156" type="method" name="showLibraryBookJson" visibility="public" complexity="3" crap="12" count="0"/>
       <line num="162" type="stmt" count="0"/>
-      <line num="164" type="stmt" count="0"/>
-      <line num="166" type="stmt" count="0"/>
+      <line num="163" type="stmt" count="0"/>
+      <line num="165" type="stmt" count="0"/>
       <line num="167" type="stmt" count="0"/>
       <line num="168" type="stmt" count="0"/>
       <line num="169" type="stmt" count="0"/>
