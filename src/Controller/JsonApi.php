@@ -160,10 +160,10 @@ class JsonApi extends AbstractController
     ): Response {
 
         $books = $bookRepository->findAll();
+        $data = [];
 
         foreach ($books as $book) {
 
-            $data = [];
             if ($book->getIsbn() === $isbn) {
                 $data = [
                     'id' => $book->getId(),
