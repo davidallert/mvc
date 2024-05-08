@@ -19,7 +19,7 @@
     <p>Akronymen CRAP står för Change Risk Anti-Patterns och är ett mätvärde som är till för att undersöka risknivåer relaterat till ändringar i koden. Om en metod har en hög CRAP-score betyder det att det kan vara riskabelt att ändra den. Man kan dock sänka kodens CRAP-score med hjälp av enhetstester.</p>
     <h2>Phpmetrics</h2>
     <p>Några av mina filer har en nivå av komplexitet som gör dem svåra att underhålla, jag har 8st viloations och några av filerna ses som instabila.</p>
-    <p><img src="{{ asset('img/complexity.png') }}"></p>
+    <p><img src="{{ asset('img/image.png') }}"></p>
     <h2>Scruitnizer</h2>
     <p>Som jag nämnde tidigare har koden en låg nivå av coverage/kodtäckning. Den har också några issues i form av potentiella buggar och best practices som inte följs. Överlag har den dock en ganska god kvalitet enligt Scrutinizer.</p>
     <p><img src="https://scrutinizer-ci.com/g/davidallert/mvc/badges/quality-score.png?b=master">
@@ -27,7 +27,8 @@
     <img src="https://scrutinizer-ci.com/g/davidallert/mvc/badges/build.png?b=master"></p>
     <h2>6C</h2>
     <p>Mina största problem verkar handla om komplexitet och kodtäckning, samt att vissa filer har hög efferent coupling.</p>
-    <h2>Förbättringar</h2>
+    <h2>Förbättringar / diskussion</h2>
     <p>Jag ska försöka minska komplexiteten i några av mina klasser, öka coverage samt försöka fixa några issues.</p>
-    <p>Vid närmare undersökning ser jag dock att den framförallt klagar på mina olika controllers, som inte har särskilt mycket logik i sig, så jag har svårt att förstå vad den tycker att jag ska ändra på. Jag antar att controllern för 21-spelet kan se komplicerad ut för ett program, eftersom den är på uppemot 200 rader och t.ex. innehåller ganska många if-satser totalt sett. Om man tittar på den faktiska koden ser man dock att varje route är ganska liten, och inte gör särskilt mycket. Den största delen av logiken hanteras inuti klasserna.</p>
+    <p>Vid närmare undersökning ser jag dock att den framförallt klagar på mina olika controllers, som inte har särskilt mycket logik i sig, så jag har svårt att förstå vad den tycker att jag ska ändra på. Jag antar att controllern för 21-spelet kan se komplicerad ut för ett program, eftersom den är på uppemot 200 rader och t.ex. innehåller ganska många if-satser totalt sett. Om man tittar på den faktiska koden ser man dock att varje route är ganska liten, och inte gör särskilt mycket. Den största delen av logiken hanteras inuti klasserna. Code coverage handlar bara om olika testklasser, övningar och controllers som vi inte har lärt oss hur man testar. 21-spelet har en något hög komplexitet och efferent coupling, men det hinner jag ju inte skriva om nu, så jag förstår inte riktigt vad det är tänkt att man ska göra. Jag tycker att klasserna som jag faktiskt har arbetat med ser bra ut så jag lämnar in detta som det är så får det bära eller brista.</p>
+
 {% endblock %}

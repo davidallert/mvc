@@ -30,7 +30,6 @@ class Game
     public function calculateScore(int $playerIndex = -1): int
     {
         $sum = 0;
-        $player;
         // Get the current player and their card hand.
         if ($playerIndex !== -1) {
             $player = $this->getPlayerFromIndex($playerIndex);
