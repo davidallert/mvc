@@ -1,0 +1,33 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Metrics{% endblock %}
+
+{% block body %}
+    <h1>Metrics</h1>
+    <h2>Introduktion</h2>
+    <h3>Codestyle</h3>
+    <p>Kodstil handlar om att skriva "snygg" kod, som är lätt att läsa, lätt att förstå och inte innehåller onödiga konstruktioner.</p>
+    <h3>Coverage</h3>
+    <p>Coverage eller kodtäckning syftar till att undersöka hur stor andel av den skrivna koden som täcks av enhetstester. Det är ett sätt att mäta testernas utsträckning, som dock inte säger något om testernas kvalitet eller relevans. Min kod har just nu bara 15% coverage.</p>
+    <h3>Complexity</h3>
+    <p>Complexity, komplexitet, är ett mätvärde som anger antalet beslutspunkter i koden. Ju fler beslutspunkter (som t.ex. if-satser) en kod har, desto svårare blir det att läsa den och desto större är risken att buggar uppstår längs vägen.</p>
+    <h3>Cohesion</h3>
+    <p>Cohesion betyder sammanhang eller sammanhållning, och är ett begrepp som används när man talar om hur väl koden hänger ihop. Ett exempel på detta är att en klass bör ha ett tydligt, avgränsat syfte och att dess metoder därmed inte bör hantera funktionalitet utanför detta syfte.</p>
+    <h3>Coupling</h3>
+    <p>Mätvärdet coupling anger "kopplingsgraden" mellan olika klasser eller moduler. Ett lågt coupling-värde innebär att kodens olika delar kan fungera självständigt.</p>
+    <h3>CRAP</h3>
+    <p>Akronymen CRAP står för Change Risk Anti-Patterns och är ett mätvärde som är till för att undersöka risknivåer relaterat till ändringar i koden. Om en metod har en hög CRAP-score betyder det att det kan vara riskabelt att ändra den. Man kan dock sänka kodens CRAP-score med hjälp av enhetstester.</p>
+    <h2>Phpmetrics</h2>
+    <p>Några av mina filer har en nivå av komplexitet som gör dem svåra att underhålla, jag har 8st viloations och några av filerna ses som instabila.</p>
+    <p><img src="{{ asset('img/complexity.png') }}"></p>
+    <h2>Scruitnizer</h2>
+    <p>Som jag nämnde tidigare har koden en låg nivå av coverage/kodtäckning. Den har också några issues i form av potentiella buggar och best practices som inte följs. Överlag har den dock en ganska god kvalitet enligt Scrutinizer.</p>
+    <p><img src="https://scrutinizer-ci.com/g/davidallert/mvc/badges/quality-score.png?b=master">
+    <img src="https://scrutinizer-ci.com/g/davidallert/mvc/badges/coverage.png?b=master">
+    <img src="https://scrutinizer-ci.com/g/davidallert/mvc/badges/build.png?b=master"></p>
+    <h2>6C</h2>
+    <p>Mina största problem verkar handla om komplexitet och kodtäckning, samt att vissa filer har hög efferent coupling.</p>
+    <h2>Förbättringar</h2>
+    <p>Jag ska försöka minska komplexiteten i några av mina klasser, öka coverage samt försöka fixa några issues.</p>
+    <p>Vid närmare undersökning ser jag dock att den framförallt klagar på mina olika controllers, som inte har särskilt mycket logik i sig, så jag har svårt att förstå vad den tycker att jag ska ändra på. Jag antar att controllern för 21-spelet kan se komplicerad ut för ett program, eftersom den är på uppemot 200 rader och t.ex. innehåller ganska många if-satser totalt sett. Om man tittar på den faktiska koden ser man dock att varje route är ganska liten, och inte gör särskilt mycket. Den största delen av logiken hanteras inuti klasserna.</p>
+{% endblock %}
