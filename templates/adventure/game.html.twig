@@ -1,0 +1,109 @@
+{% block stylesheets %}
+    {{ encore_entry_link_tags('app') }}
+{% endblock %}
+
+{% block body %}
+
+<style>
+    body {
+        background-color: #000000;
+    }
+</style>
+
+    <audio id="audio" autoplay loop>
+        <source src="{{ asset('dungeon.wav') }}" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+
+    {% for room in rooms %}
+        {# Display background based on GET roomId #}
+        {% if room.getId == roomId %}
+            <div id="gameBackground" class="gameBackground"
+                style="
+                    background-image: url('{{ room.getBackground }}');
+                ">
+
+            {# Display items on the screen. #}
+            {% for item in items %}
+                {% if item.getRoomId == roomId and item.getVisibility %}
+                    <a href="{{ path(item.getInteraction, {'itemId': item.getId }) }}" 
+                        style="
+                            position: absolute;
+                            top: {{ item.getY }}px;
+                            left: {{ item.getX }}px;
+                            text-decoration: none;
+                        ">
+                        <img src="{{ item.getImageUrl }}"
+                            style="
+                                transform: rotate({{ item.getRotation }}deg);
+                                filter: drop-shadow(1px 1px 10px #000000) brightness(0.7);
+                                opacity: {{ item.getOpacity }}
+                            ">
+                    </a>
+                {% endif %}
+            {% endfor %}
+
+            {# Display the items that are in the bag. #}
+            <div class="inventory">
+                {% for item in bag.getItems %}
+                    {% if item.getUsage %}
+                        <a href="{{ path(item.getUsage, {'itemId': item.getId }) }}"
+                            style="
+                                text-decoration: none;
+                            ">
+                    {% else %}
+                        <a href="" style="text-decoration: none;">
+                    {% endif %}
+                            <img src="{{ item.getImageUrl }}"
+                                style="
+                                    width: 50px;
+                                    height: auto;
+                            ">
+                    </a>
+                {% endfor %}
+            </div>
+
+            {# Display movement arrows #}
+            <div class="arrows">
+                <a href="{{ path('move', {'roomId': room.getForwardRoomId, 'direction': "forward" }) }}">
+                    <img class="up" src="https://www.student.bth.se/~daae23/dbwebb-kurser/mvc/me/report/public/img/adventure/spear-arrow-cropped-resize%20(50px).png">
+                </a>
+                <div class="arrowGroup">
+                    <a href="{{ path('move', {'roomId': room.getLeftRoomId, 'direction': "left"  }) }}">
+                        <img class="left" src="https://www.student.bth.se/~daae23/dbwebb-kurser/mvc/me/report/public/img/adventure/spear-arrow-cropped-resize%20(50px).png">
+                    </a>
+                    <a href="{{ path('move', {'roomId': room.getRightRoomId, 'direction': "right"  }) }}">
+                        <img class="right" src="https://www.student.bth.se/~daae23/dbwebb-kurser/mvc/me/report/public/img/adventure/spear-arrow-cropped-resize%20(50px).png">
+                    </a>
+                </div>
+                <a href="{{ path('move', {'roomId': room.getBackwardRoomId, 'direction': "backward"  }) }}">
+                    <img class="down" src="https://www.student.bth.se/~daae23/dbwebb-kurser/mvc/me/report/public/img/adventure/spear-arrow-cropped-resize%20(50px).png">
+                </a>
+            </div>
+
+            {# Display flash messages. #}
+            {% for label, messages in app.flashes %}
+                <div class="{{ label }}">
+                    <button class="closeBtn" onclick="this.parentElement.style.display='none';">×</button>
+                    {% for message in messages %}
+                        <p>{{ message | raw }}</p>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+
+
+            </div>
+        {% endif %}
+    {% endfor %}
+
+<script>
+
+let gameBackground = document.getElementById("gameBackground");
+    gameBackground.addEventListener("mousemove", function(e) {
+    let audio = document.getElementById("audio");
+    audio.play();
+})
+
+</script>
+
+{% endblock %}

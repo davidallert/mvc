@@ -1,0 +1,22 @@
+{% extends 'base_game.html.twig' %}
+
+{% block body %}
+
+<h1 class="medievalFont">Nytt spel</h1>
+    <form action="{{ path('init_process') }}" method="POST" class="form">
+        <label class="medievalFont xLarge" for="name">Vad ska din karaktär heta?</label>
+        <br>
+        <input type="text" name="name" required>
+        <input type="submit" class="medievalFont medievalSubmit xLarge">
+    </form>
+
+<h1 class="medievalFont">Fortsätt spela</h1>
+    <form action="{{ path('continue_process') }}" method="POST" class="form">
+        <label class="medievalFont xLarge" for="name">Vad heter din karaktär?</label>
+        <br>
+        <input type="text" name="continue_name" required>
+        <input type="submit" class="medievalFont medievalSubmit xLarge">
+    </form>
+
+</div>
+{% endblock %}
