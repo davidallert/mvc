@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1716910097">
-  <project timestamp="1716910097">
+<coverage generated="1716927144">
+  <project timestamp="1716927144">
     <file name="/home/david/dbwebb-kurser/mvc_new/me/report/src/Card/Card.php">
       <class name="App\Card\Card" namespace="global">
         <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="9" coveredelements="9"/>
@@ -136,7 +136,7 @@
     </file>
     <file name="/home/david/dbwebb-kurser/mvc_new/me/report/src/Controller/AdventureController.php">
       <class name="App\Controller\AdventureController" namespace="global">
-        <metrics complexity="27" methods="12" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="135" coveredstatements="0" elements="147" coveredelements="0"/>
+        <metrics complexity="27" methods="12" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="134" coveredstatements="0" elements="146" coveredelements="0"/>
       </class>
       <line num="27" type="method" name="proj" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="31" type="stmt" count="0"/>
@@ -239,7 +239,6 @@
       <line num="251" type="stmt" count="0"/>
       <line num="252" type="stmt" count="0"/>
       <line num="253" type="stmt" count="0"/>
-      <line num="254" type="stmt" count="0"/>
       <line num="255" type="stmt" count="0"/>
       <line num="257" type="stmt" count="0"/>
       <line num="259" type="stmt" count="0"/>
@@ -285,7 +284,7 @@
       <line num="348" type="stmt" count="0"/>
       <line num="350" type="stmt" count="0"/>
       <line num="355" type="stmt" count="0"/>
-      <metrics loc="359" ncloc="353" classes="1" methods="12" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="135" coveredstatements="0" elements="147" coveredelements="0"/>
+      <metrics loc="359" ncloc="351" classes="1" methods="12" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="134" coveredstatements="0" elements="146" coveredelements="0"/>
     </file>
     <file name="/home/david/dbwebb-kurser/mvc_new/me/report/src/Controller/CardGameController.php">
       <class name="App\Controller\CardGameController" namespace="global">
@@ -940,20 +939,20 @@
     </file>
     <file name="/home/david/dbwebb-kurser/mvc_new/me/report/src/Entity/Character.php">
       <class name="App\Entity\Character" namespace="global">
-        <metrics complexity="12" methods="12" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="0" elements="32" coveredelements="0"/>
+        <metrics complexity="12" methods="12" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="13" elements="32" coveredelements="22"/>
       </class>
-      <line num="41" type="method" name="getId" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="43" type="stmt" count="0"/>
-      <line num="46" type="method" name="getHealth" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="48" type="stmt" count="0"/>
-      <line num="51" type="method" name="setHealth" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="53" type="stmt" count="0"/>
-      <line num="55" type="stmt" count="0"/>
-      <line num="58" type="method" name="getName" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="60" type="stmt" count="0"/>
-      <line num="63" type="method" name="setName" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="65" type="stmt" count="0"/>
-      <line num="67" type="stmt" count="0"/>
+      <line num="41" type="method" name="getId" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="43" type="stmt" count="1"/>
+      <line num="46" type="method" name="getHealth" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="48" type="stmt" count="1"/>
+      <line num="51" type="method" name="setHealth" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="53" type="stmt" count="1"/>
+      <line num="55" type="stmt" count="1"/>
+      <line num="58" type="method" name="getName" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="60" type="stmt" count="1"/>
+      <line num="63" type="method" name="setName" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="65" type="stmt" count="1"/>
+      <line num="67" type="stmt" count="1"/>
       <line num="81" type="method" name="getBag" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="83" type="stmt" count="0"/>
       <line num="86" type="method" name="setBag" visibility="public" complexity="1" crap="2" count="0"/>
@@ -964,72 +963,72 @@
       <line num="95" type="stmt" count="0"/>
       <line num="96" type="stmt" count="0"/>
       <line num="97" type="stmt" count="0"/>
-      <line num="100" type="method" name="getCurrentRoom" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="102" type="stmt" count="0"/>
-      <line num="105" type="method" name="setCurrentRoom" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="107" type="stmt" count="0"/>
-      <line num="108" type="stmt" count="0"/>
-      <line num="111" type="method" name="getPreviousRoom" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="113" type="stmt" count="0"/>
-      <line num="116" type="method" name="setPreviousRoom" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="118" type="stmt" count="0"/>
-      <line num="119" type="stmt" count="0"/>
-      <metrics loc="122" ncloc="109" classes="1" methods="12" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="0" elements="32" coveredelements="0"/>
+      <line num="100" type="method" name="getCurrentRoom" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="102" type="stmt" count="1"/>
+      <line num="105" type="method" name="setCurrentRoom" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="107" type="stmt" count="1"/>
+      <line num="108" type="stmt" count="1"/>
+      <line num="111" type="method" name="getPreviousRoom" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="113" type="stmt" count="1"/>
+      <line num="116" type="method" name="setPreviousRoom" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="118" type="stmt" count="1"/>
+      <line num="119" type="stmt" count="1"/>
+      <metrics loc="122" ncloc="109" classes="1" methods="12" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="13" elements="32" coveredelements="22"/>
     </file>
     <file name="/home/david/dbwebb-kurser/mvc_new/me/report/src/Entity/Item.php">
       <class name="App\Entity\Item" namespace="global">
-        <metrics complexity="20" methods="20" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="29" coveredstatements="0" elements="49" coveredelements="0"/>
+        <metrics complexity="20" methods="20" coveredmethods="19" conditionals="0" coveredconditionals="0" statements="29" coveredstatements="28" elements="49" coveredelements="47"/>
       </class>
-      <line num="46" type="method" name="getId" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="48" type="stmt" count="0"/>
-      <line num="51" type="method" name="getName" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="53" type="stmt" count="0"/>
-      <line num="56" type="method" name="setName" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="58" type="stmt" count="0"/>
-      <line num="60" type="stmt" count="0"/>
-      <line num="63" type="method" name="getX" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="65" type="stmt" count="0"/>
-      <line num="68" type="method" name="setX" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="70" type="stmt" count="0"/>
-      <line num="71" type="stmt" count="0"/>
-      <line num="74" type="method" name="getY" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="76" type="stmt" count="0"/>
-      <line num="79" type="method" name="setY" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="81" type="stmt" count="0"/>
-      <line num="82" type="stmt" count="0"/>
-      <line num="85" type="method" name="getRotation" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="87" type="stmt" count="0"/>
-      <line num="90" type="method" name="setRotation" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="92" type="stmt" count="0"/>
-      <line num="93" type="stmt" count="0"/>
-      <line num="96" type="method" name="getImageUrl" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="98" type="stmt" count="0"/>
-      <line num="101" type="method" name="setImageUrl" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="103" type="stmt" count="0"/>
-      <line num="104" type="stmt" count="0"/>
-      <line num="107" type="method" name="getRoomId" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="109" type="stmt" count="0"/>
-      <line num="112" type="method" name="setRoomId" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="114" type="stmt" count="0"/>
-      <line num="115" type="stmt" count="0"/>
-      <line num="118" type="method" name="getInteraction" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="120" type="stmt" count="0"/>
-      <line num="123" type="method" name="setInteraction" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="125" type="stmt" count="0"/>
-      <line num="127" type="stmt" count="0"/>
-      <line num="130" type="method" name="getUsage" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="132" type="stmt" count="0"/>
-      <line num="135" type="method" name="setUsage" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="137" type="stmt" count="0"/>
-      <line num="139" type="stmt" count="0"/>
-      <line num="142" type="method" name="getVisibility" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="144" type="stmt" count="0"/>
-      <line num="147" type="method" name="setVisibility" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="149" type="stmt" count="0"/>
-      <line num="151" type="stmt" count="0"/>
+      <line num="46" type="method" name="getId" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="48" type="stmt" count="1"/>
+      <line num="51" type="method" name="getName" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="53" type="stmt" count="1"/>
+      <line num="56" type="method" name="setName" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="58" type="stmt" count="1"/>
+      <line num="60" type="stmt" count="1"/>
+      <line num="63" type="method" name="getX" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="65" type="stmt" count="1"/>
+      <line num="68" type="method" name="setX" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="70" type="stmt" count="1"/>
+      <line num="71" type="stmt" count="1"/>
+      <line num="74" type="method" name="getY" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="76" type="stmt" count="1"/>
+      <line num="79" type="method" name="setY" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="81" type="stmt" count="1"/>
+      <line num="82" type="stmt" count="1"/>
+      <line num="85" type="method" name="getRotation" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="87" type="stmt" count="1"/>
+      <line num="90" type="method" name="setRotation" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="92" type="stmt" count="1"/>
+      <line num="93" type="stmt" count="1"/>
+      <line num="96" type="method" name="getImageUrl" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="98" type="stmt" count="1"/>
+      <line num="101" type="method" name="setImageUrl" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="103" type="stmt" count="1"/>
+      <line num="104" type="stmt" count="1"/>
+      <line num="107" type="method" name="getRoomId" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="109" type="stmt" count="1"/>
+      <line num="112" type="method" name="setRoomId" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="114" type="stmt" count="1"/>
+      <line num="115" type="stmt" count="1"/>
+      <line num="118" type="method" name="getInteraction" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="120" type="stmt" count="1"/>
+      <line num="123" type="method" name="setInteraction" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="125" type="stmt" count="1"/>
+      <line num="127" type="stmt" count="1"/>
+      <line num="130" type="method" name="getUsage" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="132" type="stmt" count="1"/>
+      <line num="135" type="method" name="setUsage" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="137" type="stmt" count="1"/>
+      <line num="139" type="stmt" count="1"/>
+      <line num="142" type="method" name="getVisibility" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="144" type="stmt" count="1"/>
+      <line num="147" type="method" name="setVisibility" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="149" type="stmt" count="1"/>
+      <line num="151" type="stmt" count="1"/>
       <line num="154" type="method" name="getOpacity" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="156" type="stmt" count="0"/>
-      <metrics loc="159" ncloc="159" classes="1" methods="20" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="29" coveredstatements="0" elements="49" coveredelements="0"/>
+      <metrics loc="159" ncloc="159" classes="1" methods="20" coveredmethods="19" conditionals="0" coveredconditionals="0" statements="29" coveredstatements="28" elements="49" coveredelements="47"/>
     </file>
     <file name="/home/david/dbwebb-kurser/mvc_new/me/report/src/Entity/Product.php">
       <class name="App\Entity\Product" namespace="global">
@@ -1148,6 +1147,6 @@
       <line num="16" type="stmt" count="0"/>
       <metrics loc="44" ncloc="18" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
     </file>
-    <metrics files="32" loc="2935" ncloc="2539" classes="30" methods="175" coveredmethods="27" conditionals="0" coveredconditionals="0" statements="780" coveredstatements="72" elements="955" coveredelements="99"/>
+    <metrics files="32" loc="2935" ncloc="2537" classes="30" methods="175" coveredmethods="55" conditionals="0" coveredconditionals="0" statements="779" coveredstatements="113" elements="954" coveredelements="168"/>
   </project>
 </coverage>

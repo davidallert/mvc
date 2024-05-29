@@ -243,7 +243,7 @@ class AdventureController extends AbstractController
         int $roomId,
         string $direction,
         ManagerRegistry $doctrine,
-        Request $request,
+        // Request $request,
         CharacterRepository $characterRepository,
         RoomRepository $roomRepository,
         sessionInterface $session
@@ -251,7 +251,7 @@ class AdventureController extends AbstractController
         $entityManager = $doctrine->getManager();
         $character = $characterRepository->findByName($session->get("characterName"))[0];
         $nextRoom = $roomRepository->find($roomId);
-        $previousRoom = $roomRepository->find($character->getPreviousRoom());
+        // $previousRoom = $roomRepository->find($character->getPreviousRoom());
         $currentRoom = $roomRepository->find($character->getCurrentRoom());
 
         if ($roomId === 0) {
