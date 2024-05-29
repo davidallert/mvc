@@ -83,9 +83,38 @@ class Room
         return $this->rightRoomId;
     }
 
+    public function setForwardRoomId(int $id): static
+    {
+        $this->forwardRoomId = $id;
+
+        return $this;
+    }
+
+    public function setBackwardRoomId(int $id): static
+    {
+        $this->backwardRoomId = $id;
+
+        return $this;
+    }
+
+    public function setLeftRoomId(int $id): static
+    {
+        $this->leftRoomId = $id;
+
+        return $this;
+    }
+
+    public function setRightRoomId(int $id): static
+    {
+        $this->rightRoomId = $id;
+
+        return $this;
+    }
+
     public function getCompleted(): ?bool
     {
         return $this->completed;
+
     }
 
     public function setCompleted(bool $completed): static

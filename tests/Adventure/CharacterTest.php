@@ -71,9 +71,11 @@ class CharacterTest extends TestCase
         $bag = new Bag();
 
         $character->setBag($bag);
-        $bag = $character->getBag();
+        $res = $character->getBag();
 
-        $this->assertEquals($exp, $res);
+        $exp = "App\Entity\Bag";
+
+        $this->assertInstanceOf($exp, $res);
     }
 
 }

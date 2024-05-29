@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1716927144">
-  <project timestamp="1716927144">
+<coverage generated="1716978113">
+  <project timestamp="1716978113">
     <file name="/home/david/dbwebb-kurser/mvc_new/me/report/src/Card/Card.php">
       <class name="App\Card\Card" namespace="global">
         <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="9" coveredelements="9"/>
@@ -878,36 +878,36 @@
     </file>
     <file name="/home/david/dbwebb-kurser/mvc_new/me/report/src/Entity/Bag.php">
       <class name="App\Entity\Bag" namespace="global">
-        <metrics complexity="12" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="0" elements="27" coveredelements="0"/>
+        <metrics complexity="12" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="23" elements="27" coveredelements="27"/>
       </class>
-      <line num="31" type="method" name="getId" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="33" type="stmt" count="0"/>
-      <line num="36" type="method" name="setItem" visibility="public" complexity="4" crap="20" count="0"/>
-      <line num="38" type="stmt" count="0"/>
-      <line num="40" type="stmt" count="0"/>
-      <line num="41" type="stmt" count="0"/>
-      <line num="42" type="stmt" count="0"/>
-      <line num="43" type="stmt" count="0"/>
-      <line num="48" type="stmt" count="0"/>
-      <line num="50" type="stmt" count="0"/>
-      <line num="53" type="method" name="getItems" visibility="public" complexity="3" crap="12" count="0"/>
-      <line num="55" type="stmt" count="0"/>
-      <line num="56" type="stmt" count="0"/>
-      <line num="59" type="stmt" count="0"/>
-      <line num="60" type="stmt" count="0"/>
-      <line num="61" type="stmt" count="0"/>
-      <line num="64" type="stmt" count="0"/>
-      <line num="67" type="method" name="removeItem" visibility="public" complexity="4" crap="20" count="0"/>
-      <line num="69" type="stmt" count="0"/>
-      <line num="70" type="stmt" count="0"/>
-      <line num="73" type="stmt" count="0"/>
-      <line num="74" type="stmt" count="0"/>
-      <line num="75" type="stmt" count="0"/>
-      <line num="76" type="stmt" count="0"/>
-      <line num="77" type="stmt" count="0"/>
-      <line num="78" type="stmt" count="0"/>
-      <line num="82" type="stmt" count="0"/>
-      <metrics loc="85" ncloc="82" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="0" elements="27" coveredelements="0"/>
+      <line num="31" type="method" name="getId" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="33" type="stmt" count="1"/>
+      <line num="36" type="method" name="setItem" visibility="public" complexity="4" crap="4" count="4"/>
+      <line num="38" type="stmt" count="4"/>
+      <line num="40" type="stmt" count="4"/>
+      <line num="41" type="stmt" count="2"/>
+      <line num="42" type="stmt" count="2"/>
+      <line num="43" type="stmt" count="1"/>
+      <line num="48" type="stmt" count="4"/>
+      <line num="50" type="stmt" count="4"/>
+      <line num="53" type="method" name="getItems" visibility="public" complexity="3" crap="3" count="4"/>
+      <line num="55" type="stmt" count="4"/>
+      <line num="56" type="stmt" count="4"/>
+      <line num="59" type="stmt" count="4"/>
+      <line num="60" type="stmt" count="4"/>
+      <line num="61" type="stmt" count="4"/>
+      <line num="64" type="stmt" count="4"/>
+      <line num="67" type="method" name="removeItem" visibility="public" complexity="4" crap="4" count="2"/>
+      <line num="69" type="stmt" count="2"/>
+      <line num="70" type="stmt" count="1"/>
+      <line num="73" type="stmt" count="1"/>
+      <line num="74" type="stmt" count="1"/>
+      <line num="75" type="stmt" count="1"/>
+      <line num="76" type="stmt" count="1"/>
+      <line num="77" type="stmt" count="1"/>
+      <line num="78" type="stmt" count="1"/>
+      <line num="82" type="stmt" count="1"/>
+      <metrics loc="85" ncloc="82" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="23" elements="27" coveredelements="27"/>
     </file>
     <file name="/home/david/dbwebb-kurser/mvc_new/me/report/src/Entity/Book.php">
       <class name="App\Entity\Book" namespace="global">
@@ -939,7 +939,7 @@
     </file>
     <file name="/home/david/dbwebb-kurser/mvc_new/me/report/src/Entity/Character.php">
       <class name="App\Entity\Character" namespace="global">
-        <metrics complexity="12" methods="12" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="13" elements="32" coveredelements="22"/>
+        <metrics complexity="12" methods="12" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="16" elements="32" coveredelements="27"/>
       </class>
       <line num="41" type="method" name="getId" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="43" type="stmt" count="1"/>
@@ -953,11 +953,11 @@
       <line num="63" type="method" name="setName" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="65" type="stmt" count="1"/>
       <line num="67" type="stmt" count="1"/>
-      <line num="81" type="method" name="getBag" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="83" type="stmt" count="0"/>
-      <line num="86" type="method" name="setBag" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="88" type="stmt" count="0"/>
-      <line num="89" type="stmt" count="0"/>
+      <line num="81" type="method" name="getBag" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="83" type="stmt" count="1"/>
+      <line num="86" type="method" name="setBag" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="88" type="stmt" count="1"/>
+      <line num="89" type="stmt" count="1"/>
       <line num="92" type="method" name="findByName" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="94" type="stmt" count="0"/>
       <line num="95" type="stmt" count="0"/>
@@ -973,7 +973,7 @@
       <line num="116" type="method" name="setPreviousRoom" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="118" type="stmt" count="1"/>
       <line num="119" type="stmt" count="1"/>
-      <metrics loc="122" ncloc="109" classes="1" methods="12" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="13" elements="32" coveredelements="22"/>
+      <metrics loc="122" ncloc="109" classes="1" methods="12" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="16" elements="32" coveredelements="27"/>
     </file>
     <file name="/home/david/dbwebb-kurser/mvc_new/me/report/src/Entity/Item.php">
       <class name="App\Entity\Item" namespace="global">
@@ -981,11 +981,11 @@
       </class>
       <line num="46" type="method" name="getId" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="48" type="stmt" count="1"/>
-      <line num="51" type="method" name="getName" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="53" type="stmt" count="1"/>
-      <line num="56" type="method" name="setName" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="58" type="stmt" count="1"/>
-      <line num="60" type="stmt" count="1"/>
+      <line num="51" type="method" name="getName" visibility="public" complexity="1" crap="1" count="3"/>
+      <line num="53" type="stmt" count="3"/>
+      <line num="56" type="method" name="setName" visibility="public" complexity="1" crap="1" count="5"/>
+      <line num="58" type="stmt" count="5"/>
+      <line num="60" type="stmt" count="5"/>
       <line num="63" type="method" name="getX" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="65" type="stmt" count="1"/>
       <line num="68" type="method" name="setX" visibility="public" complexity="1" crap="1" count="1"/>
@@ -1050,34 +1050,46 @@
     </file>
     <file name="/home/david/dbwebb-kurser/mvc_new/me/report/src/Entity/Room.php">
       <class name="App\Entity\Room" namespace="global">
-        <metrics complexity="11" methods="11" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="0" elements="25" coveredelements="0"/>
+        <metrics complexity="15" methods="15" coveredmethods="15" conditionals="0" coveredconditionals="0" statements="22" coveredstatements="22" elements="37" coveredelements="37"/>
       </class>
-      <line num="37" type="method" name="getId" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="39" type="stmt" count="0"/>
-      <line num="42" type="method" name="getBackground" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="44" type="stmt" count="0"/>
-      <line num="47" type="method" name="setBackground" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="49" type="stmt" count="0"/>
-      <line num="51" type="stmt" count="0"/>
-      <line num="54" type="method" name="getStory" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="56" type="stmt" count="0"/>
-      <line num="59" type="method" name="setStory" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="61" type="stmt" count="0"/>
-      <line num="63" type="stmt" count="0"/>
-      <line num="66" type="method" name="getForwardRoomId" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="68" type="stmt" count="0"/>
-      <line num="71" type="method" name="getBackwardRoomId" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="73" type="stmt" count="0"/>
-      <line num="76" type="method" name="getLeftRoomId" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="78" type="stmt" count="0"/>
-      <line num="81" type="method" name="getRightRoomId" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="83" type="stmt" count="0"/>
-      <line num="86" type="method" name="getCompleted" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="88" type="stmt" count="0"/>
-      <line num="91" type="method" name="setCompleted" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="93" type="stmt" count="0"/>
-      <line num="95" type="stmt" count="0"/>
-      <metrics loc="98" ncloc="98" classes="1" methods="11" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="0" elements="25" coveredelements="0"/>
+      <line num="37" type="method" name="getId" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="39" type="stmt" count="1"/>
+      <line num="42" type="method" name="getBackground" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="44" type="stmt" count="1"/>
+      <line num="47" type="method" name="setBackground" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="49" type="stmt" count="1"/>
+      <line num="51" type="stmt" count="1"/>
+      <line num="54" type="method" name="getStory" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="56" type="stmt" count="1"/>
+      <line num="59" type="method" name="setStory" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="61" type="stmt" count="1"/>
+      <line num="63" type="stmt" count="1"/>
+      <line num="66" type="method" name="getForwardRoomId" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="68" type="stmt" count="1"/>
+      <line num="71" type="method" name="getBackwardRoomId" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="73" type="stmt" count="1"/>
+      <line num="76" type="method" name="getLeftRoomId" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="78" type="stmt" count="1"/>
+      <line num="81" type="method" name="getRightRoomId" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="83" type="stmt" count="1"/>
+      <line num="86" type="method" name="setForwardRoomId" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="88" type="stmt" count="1"/>
+      <line num="90" type="stmt" count="1"/>
+      <line num="93" type="method" name="setBackwardRoomId" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="95" type="stmt" count="1"/>
+      <line num="97" type="stmt" count="1"/>
+      <line num="100" type="method" name="setLeftRoomId" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="102" type="stmt" count="1"/>
+      <line num="104" type="stmt" count="1"/>
+      <line num="107" type="method" name="setRightRoomId" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="109" type="stmt" count="1"/>
+      <line num="111" type="stmt" count="1"/>
+      <line num="114" type="method" name="getCompleted" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="116" type="stmt" count="1"/>
+      <line num="120" type="method" name="setCompleted" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="122" type="stmt" count="1"/>
+      <line num="124" type="stmt" count="1"/>
+      <metrics loc="127" ncloc="127" classes="1" methods="15" coveredmethods="15" conditionals="0" coveredconditionals="0" statements="22" coveredstatements="22" elements="37" coveredelements="37"/>
     </file>
     <file name="/home/david/dbwebb-kurser/mvc_new/me/report/src/Kernel.php">
       <class name="App\Kernel" namespace="global">
@@ -1147,6 +1159,6 @@
       <line num="16" type="stmt" count="0"/>
       <metrics loc="44" ncloc="18" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
     </file>
-    <metrics files="32" loc="2935" ncloc="2537" classes="30" methods="175" coveredmethods="55" conditionals="0" coveredconditionals="0" statements="779" coveredstatements="113" elements="954" coveredelements="168"/>
+    <metrics files="32" loc="2964" ncloc="2566" classes="30" methods="179" coveredmethods="76" conditionals="0" coveredconditionals="0" statements="787" coveredstatements="161" elements="966" coveredelements="237"/>
   </project>
 </coverage>
