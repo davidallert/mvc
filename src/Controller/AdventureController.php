@@ -43,6 +43,18 @@ class AdventureController extends AbstractController
         return $this->render('adventure/proj_about.html.twig');
     }
 
+    #[Route('/proj/about/database', name: 'proj_about_database')]
+    public function aboutDatabase(): Response
+    {
+        return $this->render('adventure/proj_about_database.html.twig');
+    }
+
+    #[Route('/proj/api', name: 'proj_api')]
+    public function api(): Response
+    {
+        return $this->render('adventure/proj_api.html.twig');
+    }
+
     #[Route('/init_process', name: 'init_process', methods: ['POST'])]
     public function init_process(
         ManagerRegistry $doctrine,

@@ -1,0 +1,22 @@
+{% extends 'base_game.html.twig' %}
+
+{% block body %}
+
+<div class="example-wrapper">
+
+    <h1 class="medievalFont">Sök efter namnet på en karaktär</h1>
+    <form action="{{ path('json_name') }}" method="POST" class="form">
+        <label class="medievalFont xLarge" for="json_name">Se befintliga karaktärer under "Character names" nedan.</label>
+        <br>
+        <input type="text" name="json_name" required>
+        <input type="submit" class="medievalFont medievalSubmit xLarge">
+    </form>
+
+    <p class="medievalFont xxLarge"><a class="xxLarge" href="{{ path('proj_api') }}/characters">Character names</a>.</p>
+    <p class="medievalFont xxLarge"><a class="xxLarge" href="{{ path('proj_api') }}/rooms">Rooms</a>.</p>
+    <p class="medievalFont xxLarge"><a class="xxLarge" href="{{ path('proj_api') }}/items">Items</a>.</p>
+    <p class="medievalFont xxLarge"><a class="xxLarge" href="{{ path('proj_api') }}/items/images">Item images</a>.</p>
+    <p class="medievalFont xxLarge"><a class="xxLarge" href="{{ path('proj_api') }}/items/css">Item CSS data</a>.</p>
+
+</div>
+{% endblock %}

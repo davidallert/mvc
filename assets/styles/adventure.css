@@ -131,6 +131,10 @@ body {
     color: #663399;
 }
 
+.timesNewRoman {
+    font-family: "Times New Roman", sans-serif;
+}
+
 .xxLarge {
     font-size: xx-large;
 }

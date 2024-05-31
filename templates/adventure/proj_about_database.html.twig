@@ -1,0 +1,27 @@
+{% extends 'base_game.html.twig' %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    <h1 class="medievalFont">Databas</h1>
+    <h2 class="medievalFont">Tabeller</h2>
+    <h3 class="medievalFont">Character</h3>
+    <p class="timesNewRoman">I Character sparas data som är unik för karaktären, som namn, vilken Bag som tillhör karaktären, hur mycket liv (health) den har kvar, vilket rum den befinner sig i samt vilket föregående rum var.</p>
+    <h3 class="medievalFont">Bag</h3>
+    <p class="timesNewRoman">I Bag sparas en lista med serialierade saker (Items).</p>
+    <h3 class="medievalFont">Room</h3>
+    <p class="timesNewRoman">I Room sparas data som har med rummet att göra: bakgrundsbild, story, vilka riktningar som man kan gå åt och om rummet är avklarat eller ej.</p>
+    <h3 class="medievalFont">Item</h3>
+    <p class="timesNewRoman">Item har ganska många tabeller, så jag kommer inte rada upp allihop, men kort sagt innehåller tabellen data som har med sakerna att göra, som t.ex. var på skärmen de ska placeras, vilken bild som ska visas och vilken route som ska användas när man klickar på respektive sak.</p>
+    <h2 class="medievalFont">ER-diagram</h2>
+    <p class="timesNewRoman">I databas-kursen blev vi uppmanade att använda oss av reverse engineering för att skapa ER-diagram, så jag tänkte att det borde vara okej att göra även i den här kursen. Jag kunde inte använda MySQL Workbench eftersom min databas är SQLite, i alla flal inte utan att installera något tillägg. Istället laddade jag ned programmet DB Browser for SQLite och la in min databas där. Jag hade hoppats att det programmet skulle kunna göra ett diagram åt mig, men det gick inte. Istället exporterade jag databasen till en .sql-fil som jag kopierade in i ChatGPT och lät den konvertera koden från SQLite till MySQL-syntax. Det gjorde att koden blev kompatibel med en hemsida som jag hittade, dbdiagram.io, som i sin tur skapade diagrammet nedan.</p>
+    <img src="{{ asset('img/ER.png') }}">
+    <h2 class="medievalFont">Relationer</h2>
+    <p class="timesNewRoman">Character och Bag har en relation mellan varandra. Genom mappning i Symfony kan jag hålla koll på vilken Bag som tillhör vilken karaktär, och på så sätt skapas en koppling mellan dem.</p>
+    <h2 class="medievalFont">ORM/Databaskursen</h2>
+    <p class="timesNewRoman">Jag kom aldrig riktigt in i ORM på samma sätt som jag kom in i sättet vi arbetade med databaser på i databaskursen, vi nötade ju det både länge och väl där. Därför har jag knappt använt mig av t.ex. den querybuilder som finns. Istället har jag lagt in all information direkt i SQLite-databasen via terminalen, det kan man se lite "spår" av i rooms.sql och items.sql som ligger i samma mapp som data.db-filen. Därför blir min reaktion ungefär densamma som efter kmom05 - det är säkert bra, men jag känner mig inte riktigt bekväm med det. Och nu under projektet har ju fokus mer legat på genomförande snarare än att studera ORM, jag hade nog behövt några veckors plugg med ORM för att greppa det ordentligt. I kmom05 minns jag dock att jag skrev att detta sätt att arbeta kan vara smidigt om man inte har koll på SQL, men det är jag inte helt säker på att jag tycker längre - jag har i alla fall behövt gå in i migrationsfilerna och manuellt justera SQL där några gånger när saker och ting strulade, och det hade man kanske inte kunnat om man inte hade koll på SQL. Å andra sidan hade kanske problemen som jag fick aldrig uppstått om man använde sig av Doctrine för att skapa tabellerna/kolumnerna från första början... jag gjorde dem direkt i entity-klasserna. Mitt vanligaste problem var att kolumner som jag la till sattes som NOT NULL som default, men skapades utan värden, vilket gjorde att jag behövde gå in i migrationsfilen och ta bort NOT NULL från den kolumnen och sedan göra migrationen igen.</p>
+    <h2 class="medievalFont">Övrigt</h2>
+    <p class="timesNewRoman">Jag har som sagt använt SQLite som databas och jag har inte gjort enhetstester mot den, bara mot mina Entiy-klasser. De testade jag på samma sätt som vi har testat klasser tidigare.</p>
+
+</div>
+{% endblock %}

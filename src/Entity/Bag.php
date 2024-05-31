@@ -27,7 +27,6 @@ class Bag
     #[ORM\OneToOne(targetEntity: Character::class, mappedBy: "bag", cascade: ["persist", "remove"])]
     private ?Character $character = null;
 
-
     public function getId(): ?int
     {
         return $this->id;

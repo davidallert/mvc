@@ -26,7 +26,7 @@
             {# Display items on the screen. #}
             {% for item in items %}
                 {% if item.getRoomId == roomId and item.getVisibility %}
-                    <a href="{{ path(item.getInteraction, {'itemId': item.getId }) }}" 
+                    <a href="{{ path(item.getInteraction, {'itemId': item.getId }) }}"
                         style="
                             position: absolute;
                             top: {{ item.getY }}px;

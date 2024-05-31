@@ -251,6 +251,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Controller-AdventureController.html#method_about"
         },                {
+            "fqsen": "\\App\\Controller\\AdventureController\u003A\u003Aapi\u0028\u0029",
+            "name": "api",
+            "summary": "",
+            "url": "classes/App-Controller-AdventureController.html#method_api"
+        },                {
             "fqsen": "\\App\\Controller\\AdventureController\u003A\u003Ainit_process\u0028\u0029",
             "name": "init_process",
             "summary": "",
@@ -295,6 +300,41 @@ Search.appendIndex(
             "name": "magic",
             "summary": "",
             "url": "classes/App-Controller-AdventureController.html#method_magic"
+        },                {
+            "fqsen": "\\App\\Controller\\AdventureJsonApi",
+            "name": "AdventureJsonApi",
+            "summary": "",
+            "url": "classes/App-Controller-AdventureJsonApi.html"
+        },                {
+            "fqsen": "\\App\\Controller\\AdventureJsonApi\u003A\u003AjsonRooms\u0028\u0029",
+            "name": "jsonRooms",
+            "summary": "",
+            "url": "classes/App-Controller-AdventureJsonApi.html#method_jsonRooms"
+        },                {
+            "fqsen": "\\App\\Controller\\AdventureJsonApi\u003A\u003AjsonItems\u0028\u0029",
+            "name": "jsonItems",
+            "summary": "",
+            "url": "classes/App-Controller-AdventureJsonApi.html#method_jsonItems"
+        },                {
+            "fqsen": "\\App\\Controller\\AdventureJsonApi\u003A\u003AjsonItemsCss\u0028\u0029",
+            "name": "jsonItemsCss",
+            "summary": "",
+            "url": "classes/App-Controller-AdventureJsonApi.html#method_jsonItemsCss"
+        },                {
+            "fqsen": "\\App\\Controller\\AdventureJsonApi\u003A\u003AjsonItemsImages\u0028\u0029",
+            "name": "jsonItemsImages",
+            "summary": "",
+            "url": "classes/App-Controller-AdventureJsonApi.html#method_jsonItemsImages"
+        },                {
+            "fqsen": "\\App\\Controller\\AdventureJsonApi\u003A\u003AjsonCharacters\u0028\u0029",
+            "name": "jsonCharacters",
+            "summary": "",
+            "url": "classes/App-Controller-AdventureJsonApi.html#method_jsonCharacters"
+        },                {
+            "fqsen": "\\App\\Controller\\AdventureJsonApi\u003A\u003AjsonCharacter\u0028\u0029",
+            "name": "jsonCharacter",
+            "summary": "",
+            "url": "classes/App-Controller-AdventureJsonApi.html#method_jsonCharacter"
         },                {
             "fqsen": "\\App\\Controller\\CardGameController",
             "name": "CardGameController",
@@ -1175,6 +1215,26 @@ Search.appendIndex(
             "name": "getRightRoomId",
             "summary": "",
             "url": "classes/App-Entity-Room.html#method_getRightRoomId"
+        },                {
+            "fqsen": "\\App\\Entity\\Room\u003A\u003AsetForwardRoomId\u0028\u0029",
+            "name": "setForwardRoomId",
+            "summary": "",
+            "url": "classes/App-Entity-Room.html#method_setForwardRoomId"
+        },                {
+            "fqsen": "\\App\\Entity\\Room\u003A\u003AsetBackwardRoomId\u0028\u0029",
+            "name": "setBackwardRoomId",
+            "summary": "",
+            "url": "classes/App-Entity-Room.html#method_setBackwardRoomId"
+        },                {
+            "fqsen": "\\App\\Entity\\Room\u003A\u003AsetLeftRoomId\u0028\u0029",
+            "name": "setLeftRoomId",
+            "summary": "",
+            "url": "classes/App-Entity-Room.html#method_setLeftRoomId"
+        },                {
+            "fqsen": "\\App\\Entity\\Room\u003A\u003AsetRightRoomId\u0028\u0029",
+            "name": "setRightRoomId",
+            "summary": "",
+            "url": "classes/App-Entity-Room.html#method_setRightRoomId"
         },                {
             "fqsen": "\\App\\Entity\\Room\u003A\u003AgetCompleted\u0028\u0029",
             "name": "getCompleted",
