@@ -1,6 +1,7 @@
 ![AI-generated painting of Sweden](sweden.png)
 
 # Välkommen till mvc
+Detta repo innehåller mina uppgifter i kursen MVC.
 
 ## Klona repot
 För att klona repot, vänligen läs [manualen](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
