@@ -50,4 +50,48 @@
     <p>Scrutinizer känns bättre, verktyget ger mer konkreta tips och en överblick över hur väl man har testat sina klasser. Badges är ju alltid kul, men som i mitt fall där jag insåg att jag har med en massa testfiler m.m. som drar ned kod-coverage blir det ju mindre kul.</p>
 
     <p>Jag tror kanske inte att man kan påvisa kod<b>kvalitet</b> med verktyg och annat, däremot kan man påvisa att kod<b>stilen</b> stämmer överens med konstens alla regler o.s.v. Jag tror säkert att man kan skriva ett ineffektivt program som får en massa gröna bockar och badges för att man har delat upp koden i små delar och inte använder else-satser och dylikt, men som likväl är ineffektivt... Å andra sidan ser jag att det krävs ganska mycket jobb för att nå höga siffror i vissa av testverktygen, så lyckas man med det kan man nog vara ganska säker på att arbetet inte är ett hafsverk åtminstone. Men betyder det att koden är kvalitativ och "bra"? Nja... kanske, kanske inte.</p>
+    <h2 id="kmom10"><a href="#kmom10">Kmom10</a></h2>
+    <h3>Krav 1, 2, 3</h3>
+    <p>Jag valde äventyrsspelet som fokus för mitt projekt. Det verkade något svårare än vissa av de andra valen, men jag har alltid gillat att spela och tänkte att det var bättre att välja något som verkade roligt snarare än att bara gå på det enklaste valet, det gör det lättare att hålla motivationen uppe.</p>
+
+    <p>Spelet går ut på att man ska plocka upp olika saker och använda dem för att ta sig framåt. Jag la också till en halvdan story bara för att skapa någon sorts sammanhang för spelaren.</p>
+
+    <p>Spelets innehåll utgår ifrån ett antal databastabeller som renderar ut innehåll dynamiskt i en Twig-template-fil. Jag har försökt se till att göra en så dynamisk lösning som möjligt, men jag hann inte riktigt hela vägen, därför är viss funktionalitet mer hårdkodad än önskvärt i kontrollern, som t.ex. några av flashmeddelandena. En annan sak som är värd att nämna är att jag använder position: absolute och avstånd i pixlar för att placera ut sakerna, vilket innebär att man måste använda sig av skärmupplösningen 1920 x 1080 för att de ska vara utplacerade på rätt ställen.</p>
+
+    <h3>Krav 4</h3>
+    <p>För krav 4 skapade jag en separat kontroller, AdventureJsonApi.php, som innehåller alla API-routes. De flesta är ganska lika – de hämtar data från ett repository, itererar över datan som hittas, lägger till den i en array och returnerar ett JsonResponse som innehåller denna array.</p>
+
+    <p>Det svåraste var att få POST-routen att fungera. Där behövde jag använda mig av Request i Symfony och bara lägga till datan om den hittade spelaren/karaktären med namnet som skickades in. Jag la också till en array inuti karaktärs-arrayen som innehåller alla saker som karaktären just nu har i sin väska.</p>
+
+    <h3>Krav 5</h3>
+    <p>Jag läste igenom kraven innan jag började och insåg att om jag skulle göra detta kravet, så var det bäst att utgå ifrån det. Innan jag började programmera skissade jag lite på papper för att försöka komma underfund med vilka tabeller jag skulle behöva i databasen. Jag landade i att ha en tabell för rummen i spelet (Room), en för spelarens karaktär (Character), en för karaktärens unika väska (Bag) samt en för sakerna som ska finnas utplacerade i rummen (Item). Jag kände ganska snabbt att jag hade tagit mig vatten över huvudet när jag började, eftersom det var en ganska liten del av kursen som vi ägnade åt ORM, men efter mycket googlande och lite AI-hjälp så fick jag ihop det till slut. Det jag hade svårast för var hur item-klassen skulle kunna förvaras i en väska samt hur en väska skulle kunna kopplas till en karaktär. Bag-förvaringen löstes genom att serialisera Item-klasserna, och kopplingen löstes genom en OneToOne-koppling mellan Character och Bag.</p>
+    <h3>Krav 6</h3>
+    <p>Det är svårt att avgöra vad som är värt att ta upp här, men jag har några saker som jag har lagt lite extra tid eller tankekraft på så jag testar att ta med dem så får vi se om det duger.</p>
+    <h4>Dynamiska Items</h4>
+    <p>Innan jag började med projektet var min största huvudvärk hur jag skulle lyckas med att placera ut saker i rummen samt göra så att användaren skulle kunna interagera med dem. Man hade kunnat göra det textbaserat, såsom i en av bilderna i instruktionen (<a href="https://dbwebb.se/img/kurs/mvc/adventure_game2.png">https://dbwebb.se/img/kurs/mvc/adventure_game2.png</a>) men jag ville att det skulle kännas mer som spelen jag spelade när <i>jag</i> var liten, då skulle man ofta klicka på olika saker och förflytta sig genom att klicka på pilar. Ungefär såhär:</p>
+    <img src="{{ asset('img/findus.png') }}">
+
+    <p>För att göra detta har jag gjort en lösning som säkert inte är den snyggaste, men det var den jag kunde komma på. Jag skickar med alla saker (Items) i $data när webbsidan renderas, sedan itererar jag över alla saker, och om saken har ett roomId som matchar det nuvarande rummet renderas det och placeras ut med hjälp av inline-CSS. Jag har även lagt in opacity för att kunna göra ”spöket” i rum 2 genomskinligt samt göra en annan sak ”osynlig”.</p>
+
+    <h4>Koppling mellan Character och Bag</h4>
+    <p>Detta var utmanande eftersom det inte är något som vi har gått igenom i kursen. Jag insåg en bit in i projektet att jag ville ha en koppling mellan karaktären och väskan, så att man kan ha flera karaktärer som har olika saker i sina väskor.
+    För att åstadkomma detta la jag till denna kod i Character:</p>
+    <pre>
+    #[ORM\OneToOne(targetEntity: Bag::class, inversedBy: "character", cascade: ["persist", "remove"])]
+    #[ORM\JoinColumn(name: "bag_id", referencedColumnName: "id")]
+    private ?Bag $bag = null;
+    </pre>
+    <p>och denna i Bag:</p>
+    <pre>
+    #[ORM\OneToOne(targetEntity: Character::class, mappedBy: "bag", cascade: ["persist", "remove"])]
+    private ?Character $character = null;
+    </pre>
+    <h4>Utökat spel</h4>
+    <p>Jag la till några extra rum i mitt spel för att försöka göra det lite mer intressant. T.ex. rum 5 som inte fyller någon funktion utan bara är en återvändsgränd, samt rum 7 som jag la till för att spelet inte skulle få ett lika abrupt slut. Jag hade kunnat göra spelet mycket kortare genom att man t.ex. börjar i rum 1, hittar en nyckel i rum 2, och sedan låser upp vägen ut i rum 3 eller något i den stilen, och det hade antagligen också blivit godkänt, men jag la lite extra tid på att försöka göra spelet bättre. Jag har också lagt till att story-texten inte visas upp om man går in i ett rum man har ”klarat”, samt en ganska irriterande, men också ganska passande, musikslinga som går på loop i alla rum. (Jag sökte på ”free dungeon music” och tog första bästa.) Eftersom audio-autoplay tydligen inte är tillåtet (av webbläsarna) behövde jag skapa en workaround; musiken börjar spelas när JavaScript-eventlyssnaren ”mousemove” aktiveras.</p>
+    <h3>Allmänt stycke</h3>
+    <p>Jag tycker att det var ett rimligt projekt för kursen. Det klurigaste var att komma igång, vilket för mig handlade om ORM och databasen eftersom det var i den änden jag började. Det var lite svårare än jag hade tänkt mig, och det kändes som att jag inte riktigt hade förkunskaperna för att kunna lösa det egentligen, så det blev en del googlande och frågor till ChatGPT inledningsvis. När jag väl fick grunden på plats gick det ganska smidigt att ta mig framåt. Det var roligt att man fick möjligheten att göra ett sådant här spel, och jag uppskattar alltid när man har flera alternativ att välja mellan när det kommer till projektet, precis som vi fick i det här fallet.</p>
+    <h3>Tankar om kursen</h3>
+    <p>Bra kurs tycker jag, och Mos är stabil som vanligt. Det enda jag har känt som har varit negativt är att jag personligen inte tycker att det är roligt med enhetstester, linters, kodstil och hela den biten. Jag förstår att det är viktiga saker att kunna dock, så det är ju bra att de ingår i kursen.</p>
+    <p>Man hade kanske kunnat lägga lite mer fokus på ORM om det ska vara ett krav i projektet, en veckas studier på 50% kommer man inte så långt på. Däremot var det väldigt bra att vi fick två veckor på ett kursmoment där i början, det behövde man, så jag förstår att det kan vara svårt att göra den tidsavvägningen. På det stora hela har det varit en bra kurs som bl.a. har hjälpt mig att bli lite bättre på objektorientering. 8/10 får den!</p>
+
 {% endblock %}
